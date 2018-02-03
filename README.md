@@ -1,25 +1,6 @@
 # lfpelison.github.io
 
-[Go to the site](https://lfpelison.github.io/)
-
-<svg>
-    <defs>
-  			<linearGradient id="Gradient1" x1="0" y1="0" x2="100%" y2="0">
-    			<stop offset="0%" stop-color="#BBC42A" />
-    			<stop offset="100%" stop-color="#ED6E46" />
-  			</linearGradient>
-        <linearGradient id="Gradient2" x1="0" y1="0" x2="100%" y2="0">
-    			<stop offset="0%" stop-color="#BFFF2A" />
-    			<stop offset="100%" stop-color="#006E46" />
-  			</linearGradient>
-		</defs>
-		<text x="45" y="20" fill="#000000" font-size="18" textLength="85" font-family="'Raleway', sans-serif" >Luis  Felipe</text>
-	<polyline points="50,25 50,120 125,95" fill="url(#Gradient2)" 			stroke="#212121" stroke-width="10" />
-  <polyline points="65,105 65,30 130,30" fill="url(#Gradient1)" 			stroke="#424242" stroke-width="10" />
-  <polyline points="65,47 110,47" fill="transparent" 			
-stroke="#424242" stroke-width="10" />
-  <polyline points="80,99 80,62 105,62 110,80 80,80" fill="transparent" 			stroke="#616161" stroke-width="10" />
-</svg>
+<center>[Go to the homepage](https://lfpelison.github.io/)</center>
 
 ## Some insights to the website
 
