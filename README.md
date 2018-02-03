@@ -1,6 +1,6 @@
 # lfpelison.github.io
 
-<center>[Go to the homepage](https://lfpelison.github.io/)</center>
+[Go to the homepage](https://lfpelison.github.io/)
 
 ## Some insights to the website
 
