@@ -83,5 +83,23 @@ stroke="#424242" stroke-width="10" />
 </svg>
 ```
 
+## Instructions to dev
+
+* Just change the `/src/` archives
+* At the end, run `npm build`
+* To build a local server, run `npm server`
+* To watch some modifications, run `npm watch`
+
+1. clone the repo
+2. npm run (to install node_modules)
+3. create a local server with `npm server`
+4. do the modifications
+5. run `npm build`
+6. commit and push the changes
+
+
 
 #  	"If you wish to make an apple pie from scratch, you must first invent the universe." – Carl Sagan
+
+
+
