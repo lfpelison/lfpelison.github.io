@@ -1,6 +1,6 @@
 # lfpelison.github.io
 
-[Go to the site](lfpelison.github.io)
+[Go to the site](https://lfpelison.github.io/)
 
 
 ## Some insights to the website
@@ -85,4 +85,4 @@ stroke="#424242" stroke-width="10" />
 ```
 
 
-#  If you wish to make an apple pie from scratch, you must first invent the universe. – Carl Sagan
+#  	"If you wish to make an apple pie from scratch, you must first invent the universe." – Carl Sagan
