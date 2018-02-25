@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './app.js',
   devServer: {
     contentBase:'./',
     hot: true
@@ -15,14 +15,14 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './index.html',
       hash: true
     }),
-    new ExtractTextPlugin({filename:'bundle.css'}),
+    new ExtractTextPlugin({filename:'kundle.css'}),
   ],
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, '/')
+    filename: 'kundle.js',
+    path: path.resolve(__dirname, '/'),
   },
   module: {
     rules: [
