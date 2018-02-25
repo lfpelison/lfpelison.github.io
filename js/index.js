@@ -5,8 +5,8 @@
 
 console.log("xxsxHsello from JavaScript!");
 
-var name = "Bob", time = "today";
-console.log(`Hello ${name}, how are you ${time}?`);
+//var name = "Bob", time = "today";
+//console.log(`Hello ${name}, how are you ${time}?`);
 
 console.log('xxxxxxxsssxx');
 
