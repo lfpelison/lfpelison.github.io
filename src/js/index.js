@@ -8,7 +8,7 @@ console.log("Hello from JavaScript!");
 var name = "Bob", time = "today";
 console.log(`Hello ${name}, how are you ${time}?`);
 
-console.log('Jso');
+console.log('SSSSS');
 
 console.log('Depois');
 

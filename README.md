@@ -86,15 +86,15 @@ stroke="#424242" stroke-width="10" />
 ## Instructions to dev
 
 * Just change the `/src/` archives
-* At the end, run `npm build`
-* To build a local server, run `npm server`
+* At the end, run `npm run build`
+* To build a local server, run `npm run server`
 * To watch some modifications, run `npm watch`
 
 1. clone the repo
-2. npm run (to install node_modules)
-3. create a local server with `npm server`
+2. `npm install` (to install node_modules)
+3. create a local server with `npm run server`
 4. do the modifications
-5. run `npm build`
+5. run `npm run build`
 6. commit and push the changes
 
 
