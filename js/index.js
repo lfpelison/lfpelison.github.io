@@ -3,16 +3,14 @@
 //var mojs = require('mojs');
 //import * as mojs from 'mojs'
 
-console.log("xxsxHsello from JavaScript!");
-
 //var name = "Bob", time = "today";
 //console.log(`Hello ${name}, how are you ${time}?`);
 
-console.log('xxxxxxxsssxx');
 
-console.log('Depois');
+console.log('Depsssssois');
 
-console.log('primeissro?');
+/*
+
 document.addEventListener("DOMContentLoaded", function(event) {
 	console.log("DOM fully loaded and parsed");
 
@@ -48,3 +46,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}).play();
 	
 });
+
+*/

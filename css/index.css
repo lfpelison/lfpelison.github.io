@@ -1,13 +1,13 @@
 body, html {
-  padding: 0;
-  background: #5D4157; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #5D4157 , #A8CABA); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #D55A17 , #DC69ED); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 2em);
+  background: #ECECEC; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to left, #5D4157 , #A8CABA); /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to left, #D55A17 , #DC69ED); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Montserrat', sans-serif;
   color: rgb(59, 38, 57);
   text-align: center;
-  letter-spacing: 0.03em;
-  overflow: hidden;
 }
 
 .square {
@@ -19,6 +19,32 @@ body, html {
   left:       50%;
   margin-left: -27px;
   margin-top:  -25px;
+}
+
+
+.content {
+  margin-top: 2em;
+  flex: 1;
+}
+
+
+.footer {
+  margin: auto;
+}
+
+h1 {
+  color: #44201D;
+  font-size: 72px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h2 {
+  color: #84496C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  margin: 0;
 }
 
 
