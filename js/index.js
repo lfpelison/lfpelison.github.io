@@ -9,6 +9,26 @@
 
 console.log('Depsssssois');
 
+var x = 215;
+function setup() {
+	let canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0, 0);
+	canvas.style('pointer-events', 'none');
+	clear();
+
+	
+}
+
+function draw() {
+	var svg = select('#x');
+	if (mouseIsPressed) {
+		strokeWeight(4);
+		stroke(0);
+		line(mouseX, mouseY, pmouseX, pmouseY);
+		svg.style('width','15%');
+	}
+}
+
 /*
 
 document.addEventListener("DOMContentLoaded", function(event) {
