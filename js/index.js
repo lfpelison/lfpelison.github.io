@@ -9,25 +9,63 @@
 
 console.log('Depsssssois');
 
-var x = 215;
+
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);
 	canvas.position(0, 0);
 	canvas.style('pointer-events', 'none');
 	clear();
+	colorMode(HSB);
 
 	
 }
 
 function draw() {
 	var svg = select('#x');
+	var logo = select('#logo');
+	var me = select('#me');
+	var name = select('#name');
+	var career = select('#career');
+	var center__bottom = select('#center__bottom');
+
 	if (mouseIsPressed) {
-		strokeWeight(4);
-		stroke(0);
+		strokeWeight(8);
+		stroke(map(mouseX, 0, windowWidth, 0, 360), 41.2, map(mouseY, 0, windowHeight, 45, 90)); //64.2
 		line(mouseX, mouseY, pmouseX, pmouseY);
-		svg.style('width','15%');
+		console.log(frameCount);
+		
 	}
+
+	if (frameCount == 250) {
+		svg.style('width','56px');
+		svg.style('height','22px');
+		svg.style('margin-right', '1.2em');
+		svg.parent('right__bottom');
+		logo.parent('left');
+
+		var cloneSvg = document.getElementById("x").cloneNode(true);
+		document.getElementById("right__bottom").appendChild(cloneSvg);
+
+		var cloneSvg = document.getElementById("x").cloneNode(true);
+		document.getElementById("right__bottom").appendChild(cloneSvg);
+
+		var home = createA('http://p5js.org/', 'Home').parent('right__top').addClass('text');
+		var about = createA('http://p5js.org/', 'About').parent('right__top').addClass('text');
+		var work = createA('http://p5js.org/', 'Work').parent('right__top').addClass('text');
+
+		me.style('display', 'inline-block');
+		name.style('display', 'none');
+		career.style('display', 'none');
+
+		contact = createElement('h3', 'Contact me').parent('center__top');
+
+		center__bottom.style('display', 'flex');
+
+	}
+
 }
+
+
 
 /*
 
