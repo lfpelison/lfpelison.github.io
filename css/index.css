@@ -69,16 +69,18 @@ body, html {
   margin-bottom: 3em;
 }
 
-#center__bottom {
-  display: none;
-}
-
 .icons_contact {
   margin-right: 2em;
 }
 
+#center__bottom {
+  display: none;
+}
+
+.center__bottom {
+}
+
 .center__top {
-  flex: 1;
   margin-bottom: 3em;
 }
 

@@ -7,8 +7,6 @@
 //console.log(`Hello ${name}, how are you ${time}?`);
 
 
-console.log('Depsssssois');
-
 
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);
@@ -32,7 +30,6 @@ function draw() {
 		strokeWeight(8);
 		stroke(map(mouseX, 0, windowWidth, 0, 360), 41.2, map(mouseY, 0, windowHeight, 45, 90)); //64.2
 		line(mouseX, mouseY, pmouseX, pmouseY);
-		console.log(frameCount);
 		
 	}
 
@@ -59,7 +56,9 @@ function draw() {
 
 		contact = createElement('h3', 'Contact me').parent('center__top');
 
-		center__bottom.style('display', 'flex');
+		center__bottom.style('display', 'inline');
+
+		//document.getElementById("footer").appendChild(document.getElementById("center__bottom"));
 
 	}
 
