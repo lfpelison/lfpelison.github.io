@@ -24,7 +24,7 @@ function draw() {
 	var me = select('#me');
 	var name = select('#name');
 	var career = select('#career');
-	var center__bottom = select('#center__bottom');
+	var above_footer = select('#above_footer');
 
 	if (mouseIsPressed) {
 		strokeWeight(8);
@@ -53,10 +53,11 @@ function draw() {
 		me.style('display', 'inline-block');
 		name.style('display', 'none');
 		career.style('display', 'none');
+		logo.style('padding', '0 2.5em 0 1em');
 
-		contact = createElement('h3', 'Contact me').parent('center__top');
+		contact = createElement('h3', 'Contact me').parent('contact_here');
 
-		center__bottom.style('display', 'inline');
+		above_footer.style('display', 'inline');
 
 		//document.getElementById("footer").appendChild(document.getElementById("center__bottom"));
 
