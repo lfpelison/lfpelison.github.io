@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Page</title>
+
+  <!-- Add p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #ECECEC;
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+      colorMode(HSB);  // Use Hue-Saturation-Brightness color model for smooth color transitions
+      noStroke();      // No border for rectangles
+    }
+
+    function draw() {
+      background(25, 10, 95);  // Soft light background
+
+      let cols = 15; // Number of columns
+      let rows = 10; // Number of rows
+      let w = width / cols;
+      let h = height / rows;
+
+      for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+          let x = i * w;
+          let y = j * h;
+
+          let angle = map(mouseX, 0, width, -TWO_PI * 1, TWO_PI * 1); // Allow full 720 degrees rotation
+
+          push();
+          translate(x + w / 2, y + h / 2); // Translate to center of each cell
+          rotate(angle);  // Rotate each element
+          
+          let hue = map(mouseX, 0, width, 30, 330);  // Dynamic color
+          let brightness = map(mouseY, 0, height, 50, 100);
+          fill(hue, 70, brightness);  // Fill each shape with dynamic color
+
+          rectMode(CENTER);
+          rect(0, 0, w * 0.5, h * 0.05);  // Narrow, shorter rectangle that rotates
+          pop();
+        }
+      }
+    }
+
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);  // Make canvas responsive
+    }
+  </script>
+
+  <!-- Minimalist Pagination Navigation -->
+  <div class="pagination-container">
+    <div class="pagination">
+      <a href="index.html" class="nav-link">⬅️ Previous</a>
+      <a href="index.html" class="nav-link">🏠 Home</a>
+      <a href="art_02.html" class="nav-link">Next ➡️</a>
+    </div>
+  </div>
+  
+  <!-- Styling for the navigation -->
+  <style>
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 20px; /* Always at the bottom of the page */
+      width: 100%; /* Full width to align center */
+      text-align: center;
+    }
+  
+    .pagination {
+      display: flex;
+      background-color: black; /* Set background color of the container to black */
+      border: 1px solid white; /* Border for the container */
+      border-radius: 20px; /* Rounded corners */
+      overflow: hidden; /* Ensures rounded corners are visible */
+      padding: 10px 0; /* Vertical padding for the entire bar */
+      width: 500px; /* Fixed width for the pagination bar */
+    }
+  
+    .nav-link {
+      font-family: 'Montserrat', sans-serif; /* Ensure it uses Montserrat font */
+      color: white; /* Change link color to white */
+      text-decoration: none;
+      font-size: 15px;
+      flex: 1; /* Allows each link to take equal space */
+      text-align: center; /* Center text within each button */
+      padding: 5px; /* Adjust padding to be consistent */
+      line-height: 1.5; /* Set a consistent line height */
+    }
+  
+    .nav-link:hover {
+      color: grey; /* Text color on hover */
+    }
+  
+    /* Small devices */
+    @media only screen and (max-width: 600px) {
+      .nav-link {
+        font-size: 14px; /* Smaller font for small screens */
+      }
+    }
+  </style>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art 02 | Luis Felipe Pelison</title>
+
+    <!-- Add p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+
+  <style>
+        body {
+            background-color: black; /* Set background to black */
+            color: white; /* Text color white */
+            font-family: 'Montserrat', sans-serif; /* Font style */
+            overflow: hidden; /* Hide scrollbars */
+            display: flex; /* Flexbox to center the canvas */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full height */
+        }
+        .canvas-container {
+            position: relative; /* Positioning for the canvas */
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <script>
+        let circles = [];
+        let numCircles = 20; // Number of circles
+    
+        function setup() {
+            createCanvas(windowWidth, windowHeight)
+            for (let i = 0; i < numCircles; i++) {
+                circles.push(new Circle(random(width), random(height), random(30, 80))); // Adjusted max size
+            }
+        }
+
+        function draw() {
+            background(0); // Black background
+            if (mouseIsPressed) { // Only draw circles when the mouse is clicked
+                for (let circle of circles) {
+                    circle.update();
+                    circle.display();
+                }
+            }
+        }
+
+        function mousePressed() {
+            // Optionally, you can reset circle positions or create new circles on mouse press
+            for (let circle of circles) {
+                circle.x = random(width); // Move to a random position
+                circle.y = random(height);
+            }
+        }
+    
+        class Circle {
+            constructor(x, y, r) {
+                this.x = x;
+                this.y = y;
+                this.r = r;
+                this.alpha = 255; // Full opacity
+            }
+    
+            update() {
+                this.alpha -= 2; // Faster fade out effect
+                if (this.alpha < 0) {
+                    this.alpha = 255; // Reset opacity
+                    this.x = random(width); // Move to a random position
+                    this.y = random(height);
+                }
+            }
+    
+            display() {
+                noStroke();
+                fill(255, this.alpha); // White fill with varying opacity
+                ellipse(this.x, this.y, this.r); // Draw circle
+            }
+        }
+    
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight); // Adjust canvas size on window resize
+        }
+    </script>
+
+    <!-- Minimalist Pagination Navigation -->
+    <div class="pagination-container">
+        <div class="pagination">
+        <a href="art_01.html" class="nav-link">⬅️ Previous</a>
+        <a href="index.html" class="nav-link">🏠 Home</a>
+        <a href="art_01.html" class="nav-link">Next ➡️</a>
+        </div>
+    </div>
+    
+    <!-- Styling for the navigation -->
+    <style>
+        .pagination-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 20px; /* Always at the bottom of the page */
+        width: 100%; /* Full width to align center */
+        text-align: center;
+        }
+    
+        .pagination {
+        display: flex;
+        background-color: black; /* Set background color of the container to black */
+        border: 1px solid white; /* Border for the container */
+        border-radius: 20px; /* Rounded corners */
+        overflow: hidden; /* Ensures rounded corners are visible */
+        padding: 10px 0; /* Vertical padding for the entire bar */
+        width: 500px; /* Fixed width for the pagination bar */
+        }
+    
+        .nav-link {
+        font-family: 'Montserrat', sans-serif; /* Ensure it uses Montserrat font */
+        color: white; /* Change link color to white */
+        text-decoration: none;
+        font-size: 15px;
+        flex: 1; /* Allows each link to take equal space */
+        text-align: center; /* Center text within each button */
+        padding: 5px; /* Adjust padding to be consistent */
+        line-height: 1.5; /* Set a consistent line height */
+        }
+    
+        .nav-link:hover {
+        color: grey; /* Text color on hover */
+        }
+    
+        /* Small devices */
+        @media only screen and (max-width: 600px) {
+        .nav-link {
+            font-size: 14px; /* Smaller font for small screens */
+        }
+        }
+    </style>
+
+</body>
+</html>

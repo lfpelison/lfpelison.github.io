@@ -46,9 +46,9 @@ function draw() {
 		var cloneSvg = document.getElementById("x").cloneNode(true);
 		document.getElementById("right__bottom").appendChild(cloneSvg);
 
-		var home = createA('http://p5js.org/', 'Home').parent('right__top').addClass('text');
+		var home = createA('index.html', 'Home').parent('right__top').addClass('text');
 		var about = createA('http://p5js.org/', 'About').parent('right__top').addClass('text');
-		var work = createA('http://p5js.org/', 'Work').parent('right__top').addClass('text');
+		var art = createA('art_01.html', 'Arts   ').parent('right__top').addClass('text');
 
 		me.style('display', 'inline-block');
 		name.style('display', 'none');
